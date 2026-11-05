@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Muhamad Ayub | Data Analyst</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#0f172a',
+                        },
+                        cyanAccent: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styling for print support */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-full-width {
+                width: 100% !important;
+                max-width: none !important;
+            }
+            .cv-card {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                break-inside: avoid;
+            }
+            .bg-gradient-header {
+                background: #1e3a8a !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        .bg-gradient-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0284c7 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Animated skill bars */
+        .skill-progress {
+            transition: width 1s ease-in-out;
+        }
+
+        /* Timeline connector line */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 28px;
+            bottom: 0;
+            left: 15px;
+            width: 2px;
+            background: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen">
+
+    <!-- Top Action Toolbar (Floating, Hidden in Print) -->
+    <header class="no-print sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md text-white border-b border-slate-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-brand-600 text-white font-display font-bold text-lg px-3 py-1 rounded-lg">MA</span>
+                <span class="font-semibold text-sm sm:text-base tracking-wide text-slate-200">Muhamad Ayub <span class="text-brand-400 font-normal">| Executive Interactive CV</span></span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <button onclick="window.print()" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm px-4 py-2 rounded-lg transition-all shadow-sm hover:shadow-brand-500/20 active:scale-95">
+                    <i class="fa-solid fa-print"></i>
+                    <span>Cetak / Save PDF</span>
+                </button>
+                <a href="https://github.com/runyube" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-sm px-4 py-2 rounded-lg transition-all border border-slate-700">
+                    <i class="fa-brands fa-github text-lg"></i>
+                    <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Outer Container -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 my-4 sm:my-6">
+        
+        <!-- Interactive Header Banner -->
+        <div class="bg-gradient-header rounded-2xl p-6 sm:p-10 text-white shadow-xl relative overflow-hidden mb-8 border border-slate-800">
+            <!-- Decorative Subtle Grid SVG -->
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-6 lg:gap-8">
+                <!-- Profile Image Avatar -->
+                <div class="relative group">
+                    <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-brand-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                    <img src="https://i.ibb.co.com/P3Vshpn/Whats-App-Image-2026-10-09-at-10-33-06.jpg" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/150x180/1e3a8a/ffffff?text=Muhamad+Ayub';"
+                         alt="Foto Profil Muhamad Ayub" 
+                         class="relative w-32 h-40 sm:w-36 sm:h-44 object-cover rounded-xl shadow-lg border-2 border-white/20">
+                    <span class="absolute bottom-2 right-2 flex h-3.5 w-3.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-slate-900" title="Terbuka untuk peluang karir"></span>
+                    </span>
+                </div>
+
+                <!-- Profile Info Header -->
+                <div class="flex-1 text-center md:text-left space-y-3">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-chart-line text-cyan-400"></i> Data Analyst & Operations Specialist
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display tracking-tight text-white">
+                        MUHAMAD AYUB
+                    </h1>
+                    <p class="text-lg text-slate-300 font-medium max-w-2xl">
+                        Spesialis Pengolahan Data Operasional, Logistik & Penagihan Berkelanjutan di Perum BULOG
+                    </p>
+                    
+                    <!-- Quick Contact Badges -->
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2 text-xs sm:text-sm text-slate-300">
+                        <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-location-dot text-cyan-400"></i> Tangerang Selatan, Indonesia
+                        </span>
+                        <a href="https://github.com/runyube" target="_blank" class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 hover:bg-white/20 transition">
+                            <i class="fa-brands fa-github text-cyan-400"></i> github.com/runyube
+                        </a>
+                        <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                            <i class="fa-solid fa-graduation-cap text-cyan-400"></i> S1 Teknik Informatika (Unindra)
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Key Metrics Summary Badge -->
+                <div class="no-print hidden lg:flex flex-col gap-3 bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/15 min-w-[200px] text-center">
+                    <div>
+                        <div class="text-2xl font-bold font-display text-cyan-300">5+ Tahun</div>
+                        <div class="text-xs text-slate-300">Pengalaman di Perum BULOG</div>
+                    </div>
+                    <div class="border-t border-white/10 pt-2">
+                        <div class="text-2xl font-bold font-display text-emerald-400">100%</div>
+                        <div class="text-xs text-slate-300">Akurasi Rekap SO & Penagihan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2-Column Responsive Dashboard Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- LEFT SIDEBAR (4 cols on desktop) -->
+            <aside class="lg:col-span-4 space-y-6">
+                
+                <!-- Quick Navigation Tabs (Mobile Interactive) -->
+                <div class="no-print lg:hidden bg-white rounded-xl p-2 shadow-sm border border-slate-200 flex overflow-x-auto gap-2">
+                    <button onclick="scrollToSection('summary')" class="flex-1 py-2 px-3 text-xs font-semibold text-slate-700 bg-slate-100 rounded-lg whitespace-nowrap">Profil</button>
+                    <button onclick="scrollToSection('experience')" class="flex-1 py-2 px-3 text-xs font-semibold text-slate-700 bg-slate-100 rounded-lg whitespace-nowrap">Pengalaman</button>
+                    <button onclick="scrollToSection('skills')" class="flex-1 py-2 px-3 text-xs font-semibold text-slate-700 bg-slate-100 rounded-lg whitespace-nowrap">Keahlian</button>
+                    <button onclick="scrollToSection('projects')" class="flex-1 py-2 px-3 text-xs font-semibold text-slate-700 bg-slate-100 rounded-lg whitespace-nowrap">Portofolio</button>
+                </div>
+
+                <!-- Keahlian Teknis & Tools (Interactive Progress Bars) -->
+                <div id="skills" class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                        <h2 class="text-base font-bold font-display text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-code text-brand-600"></i> Keahlian Teknis
+                        </h2>
+                        <span class="text-xs bg-brand-50 text-brand-700 font-semibold px-2 py-0.5 rounded">Verified</span>
+                    </div>
+
+                    <!-- Skills Items -->
+                    <div class="space-y-4">
+                        <!-- Excel & Spreadsheet -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                                <span>Microsoft Excel / WPS Spreadsheet</span>
+                                <span class="text-brand-600 font-bold">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                <div class="bg-brand-600 h-2 rounded-full skill-progress" style="width: 95%;"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-500 mt-1">SUMIFS, Pivot Table, VLOOKUP, FILTER, Query Logika</p>
+                        </div>
+
+                        <!-- Data Processing & Validation -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                                <span>Pengolahan & Validasi Data Operasional</span>
+                                <span class="text-brand-600 font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                <div class="bg-cyan-500 h-2 rounded-full skill-progress" style="width: 90%;"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-500 mt-1">Data Cleaning, Monitoring Penjualan & Rekap Stok</p>
+                        </div>
+
+                        <!-- Database & SQL -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                                <span>SQL & Database Querying</span>
+                                <span class="text-brand-600 font-bold">78%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                <div class="bg-brand-500 h-2 rounded-full skill-progress" style="width: 78%;"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-500 mt-1">Ekstraksi Data, Agregasi, Management Table & Analytics</p>
+                        </div>
+
+                        <!-- Visualisasi Data -->
+                        <div>
+                            <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                                <span>Visualisasi Data & Business Reporting</span>
+                                <span class="text-brand-600 font-bold">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                <div class="bg-indigo-500 h-2 rounded-full skill-progress" style="width: 75%;"></div>
+                            </div>
+                            <p class="text-[11px] text-slate-500 mt-1">Power BI, Dashboard Rekapitulasi & Report Execution</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Tech Tags -->
+                    <div class="mt-6 pt-4 border-t border-slate-100">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">Tag Kompetensi:</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs bg-slate-100 hover:bg-brand-50 text-slate-700 px-2.5 py-1 rounded-md font-medium border border-slate-200">Sales Order (SO)</span>
+                            <span class="text-xs bg-slate-100 hover:bg-brand-50 text-slate-700 px-2.5 py-1 rounded-md font-medium border border-slate-200">Bantuan Pangan</span>
+                            <span class="text-xs bg-slate-100 hover:bg-brand-50 text-slate-700 px-2.5 py-1 rounded-md font-medium border border-slate-200">Program SPHP</span>
+                            <span class="text-xs bg-slate-100 hover:bg-brand-50 text-slate-700 px-2.5 py-1 rounded-md font-medium border border-slate-200">Penagihan & Piutang</span>
+                            <span class="text-xs bg-slate-100 hover:bg-brand-50 text-slate-700 px-2.5 py-1 rounded-md font-medium border border-slate-200">Audit Dokumen</span>
+                            <span class="text-xs bg-slate-100 hover:bg-brand-50 text-slate-700 px-2.5 py-1 rounded-md font-medium border border-slate-200">Administrasi Logistik</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pendidikan Section -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                        <h2 class="text-base font-bold font-display text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-brand-600"></i> Pendidikan
+                        </h2>
+                    </div>
+
+                    <div class="relative pl-4 border-l-2 border-brand-500 space-y-2">
+                        <div class="text-sm font-bold text-slate-900">S1 Teknik Informatika</div>
+                        <div class="text-xs font-semibold text-brand-600">Universitas Indraprasta PGRI (Unindra)</div>
+                        <div class="text-xs text-slate-500">Status: <span class="bg-amber-100 text-amber-800 font-medium px-2 py-0.5 rounded">Sedang Menempuh Pendidikan</span></div>
+                        <p class="text-xs text-slate-600 pt-1">
+                            Fokus pada penguatan kompetensi teknis di bidang basis data, struktur data, kueri SQL, dan analisa data berbasis teknologi informasi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Minat & Hobby Section -->
+                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div class="flex items-center justify-between mb-3 pb-3 border-b border-slate-100">
+                        <h2 class="text-base font-bold font-display text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-heart text-rose-500"></i> Minat & Aktivitas
+                        </h2>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-700">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-video text-brand-600 mt-0.5"></i>
+                            <span><b>Videografi & Video Editing:</b> Pembuatan konten visual, visual storytelling, dan pengolahan media digital.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-person-running text-brand-600 mt-0.5"></i>
+                            <span><b>Olahraga Lari Jarak Jauh:</b> Pendokumentasian progres latihan dan performa fisik di bawah handle <b>@kilotracker</b>.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+
+            <!-- RIGHT MAIN CONTENT AREA (8 cols on desktop) -->
+            <main class="lg:col-span-8 space-y-6">
+                
+                <!-- Ringkasan Profil Profesional Card -->
+                <section id="summary" class="bg-white rounded-xl p-6 sm:p-7 shadow-sm border border-slate-200">
+                    <h2 class="text-lg font-bold font-display text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-brand-600"></i> Ringkasan Profil Profesional
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed text-justify">
+                        Profesional administrasi dan operasional dengan pengalaman kerja di <b>Perum BULOG</b> sejak 2019. Memiliki keahlian mendalam dalam pengolahan data operasional, validasi data transaksi, monitoring realisasi penjualan, serta pembuatan laporan berkala menggunakan spreadsheet lanjutan. Saat ini sedang memperdalam kompetensi teknis dalam kueri SQL, visualisasi data, dan manajemen basis data melalui studi S1 Teknik Informatika di <b>Universitas Indraprasta PGRI (Unindra)</b> untuk memberikan dampak optimal dalam analisis data bisnis.
+                    </p>
+                </section>
+
+                <!-- Pengalaman Kerja Section -->
+                <section id="experience" class="bg-white rounded-xl p-6 sm:p-7 shadow-sm border border-slate-200">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-slate-100 gap-2">
+                        <h2 class="text-lg font-bold font-display text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-brand-600"></i> Pengalaman Kerja
+                        </h2>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full w-fit">
+                            <i class="fa-solid fa-building text-slate-400"></i> Perum BULOG (2019 – Sekarang)
+                        </span>
+                    </div>
+
+                    <!-- Job Position Title Box -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                        <div>
+                            <h3 class="text-base font-bold text-slate-900">Staf Pemasaran</h3>
+                            <p class="text-xs text-brand-700 font-semibold">Perum BULOG &bull; Full-time</p>
+                        </div>
+                        <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-3 py-1 rounded-md border border-emerald-200">
+                            2019 – Sekarang (Aktif)
+                        </span>
+                    </div>
+
+                    <!-- Detailed Responsibilities Timeline Grid -->
+                    <div class="space-y-6">
+                        
+                        <!-- Responsibility Block 1 -->
+                        <div class="relative pl-6 border-l-2 border-brand-600">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-brand-600 border-4 border-white"></div>
+                            <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                <span>1. Koordinasi dan Administrasi Program SPHP TNI, Polri, dan BUMN (PT Pos)</span>
+                            </h4>
+                            <ul class="mt-2 space-y-1.5 text-xs text-slate-600 list-disc list-inside">
+                                <li>Mengelola administrasi penjualan beras SPHP (Stabilisasi Pasokan dan Harga Pangan) untuk instansi TNI, Polri, dan BUMN (PT Pos).</li>
+                                <li>Melakukan koordinasi intensif dengan pihak pelanggan terkait kelancaran proses pemesanan hingga jadwal pengambilan beras di gudang.</li>
+                                <li>Mengelola dan menata arsip dokumen transaksi serta administrasi penjualan agar terverifikasi dengan valid.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Responsibility Block 2 -->
+                        <div class="relative pl-6 border-l-2 border-cyan-500">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-cyan-500 border-4 border-white"></div>
+                            <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                <span>2. Pembuatan Sales Order (SO) Bantuan Pangan</span>
+                            </h4>
+                            <ul class="mt-2 space-y-1.5 text-xs text-slate-600 list-disc list-inside">
+                                <li>Melakukan input data presisi dan penerbitan <i>Sales Order</i> (SO) resmi untuk program Bantuan Pangan.</li>
+                                <li>Memastikan 100% kesesuaian data kuota, alamat penerima, dan dokumen pendukung transaksi sebelum proses pengeluaran barang.</li>
+                                <li>Berkoordinasi secara aktif dengan tim kepala gudang dan pihak ekspedisi/transporter dalam penyiapan serta penyaluran bantuan pangan tepat waktu.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Responsibility Block 3 -->
+                        <div class="relative pl-6 border-l-2 border-indigo-600">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white"></div>
+                            <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                <span>3. Penagihan dan Monitoring Pembayaran</span>
+                            </h4>
+                            <ul class="mt-2 space-y-1.5 text-xs text-slate-600 list-disc list-inside">
+                                <li>Melakukan proses penagihan pembayaran secara profesional kepada mitra instansi TNI, Polri, dan BUMN.</li>
+                                <li>Melakukan monitoring dan rekapitulasi harian terhadap status pembayaran serta saldo piutang pelanggan.</li>
+                                <li>Melakukan verifikasi faktur, bukti transfer pembayaran, serta kelengkapan dokumen pendukung pelaporan keuangan.</li>
+                                <li>Melakukan koordinasi proaktif dan tindak lanjut (follow-up) secara solutif atas transaksi yang belum terselesaikan.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Proyek Portofolio & Studi Kasus Interactive Section -->
+                <section id="projects" class="bg-white rounded-xl p-6 sm:p-7 shadow-sm border border-slate-200">
+                    <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+                        <h2 class="text-lg font-bold font-display text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-folder-open text-brand-600"></i> Proyek Portofolio & Studi Kasus
+                        </h2>
+                        <span class="text-xs text-slate-500 font-medium no-print">Klik untuk preview detail</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <!-- Project Card 1 -->
+                        <div class="border border-slate-200 rounded-xl p-5 hover:border-brand-500 hover:shadow-md transition group bg-slate-50/50">
+                            <div class="flex items-start justify-between mb-2">
+                                <span class="bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2.5 py-0.5 rounded">Excel / Spreadsheet</span>
+                                <i class="fa-solid fa-file-excel text-emerald-600 text-lg"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition">
+                                Dashboard Realisasi Penjualan & Rekap SO
+                            </h3>
+                            <p class="text-xs text-slate-600 mt-2 line-clamp-3">
+                                Merancang model rekapitulasi data penjualan interaktif berbasis Spreadsheet lanjutan (Pivot Table, SUMIFS, FILTER) untuk pemantauan realisasi distribusi program SPHP dan Bantuan Pangan secara terukur.
+                            </p>
+                            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs">
+                                <span class="text-slate-500">Teknologi: Excel, Pivot Table</span>
+                                <button onclick="openModal('modal-excel')" class="text-brand-600 hover:text-brand-800 font-bold flex items-center gap-1">
+                                    Detail <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="border border-slate-200 rounded-xl p-5 hover:border-brand-500 hover:shadow-md transition group bg-slate-50/50">
+                            <div class="flex items-start justify-between mb-2">
+                                <span class="bg-blue-100 text-blue-800 text-[11px] font-bold px-2.5 py-0.5 rounded">SQL Database</span>
+                                <i class="fa-solid fa-database text-blue-600 text-lg"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-slate-900 group-hover:text-brand-600 transition">
+                                Analisis Distribusi & Audit Piutang Logistik
+                            </h3>
+                            <p class="text-xs text-slate-600 mt-2 line-clamp-3">
+                                Menulis kueri SQL relasional untuk ekstraksi data inventaris, pengelompokan piutang transaksi berdasarkan instansi pelanggan, serta pembersihan anomali data operasional.
+                            </p>
+                            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-between items-center text-xs">
+                                <span class="text-slate-500">Teknologi: SQL, PostgreSQL</span>
+                                <button onclick="openModal('modal-sql')" class="text-brand-600 hover:text-brand-800 font-bold flex items-center gap-1">
+                                    Detail <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Key Impact & Highlights Checklist -->
+                <section class="bg-gradient-to-r from-slate-900 to-brand-900 text-white rounded-xl p-6 shadow-md border border-slate-800">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-cyan-400 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-400"></i> Keunggulan Utama Muhamad Ayub
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-200">
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                            <span>Pengalaman nyata 5+ tahun dalam mengelola operasional data komoditas pangan skala nasional.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                            <span>Kombinasi latar belakang operasional lapangan dan studi formal Teknik Informatika.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                            <span>Ketelitian tinggi dalam verifikasi dokumen Sales Order & penagihan piutang instansi BUMN/TNI/Polri.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                            <span>Adaptif dengan perkembangan alat analisis data modern (SQL, Python, Power BI).</span>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-xs text-slate-500 border-t border-slate-200 pt-6 no-print">
+            <p>© 2026 Muhamad Ayub — Curriculum Vitae Interaktif Data Analyst.</p>
+            <p class="mt-1 text-slate-400">Dibuat dengan HTML5, Tailwind CSS, & JavaScript Modern.</p>
+        </footer>
+
+    </main>
+
+    <!-- PROJECT MODALS (Interactive Popups) -->
+    <!-- Modal 1: Excel Project -->
+    <div id="modal-excel" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 relative animate-fadeIn">
+            <button onclick="closeModal('modal-excel')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-lg">
+                    <i class="fa-solid fa-file-excel text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-base">Dashboard Realisasi Penjualan (Excel)</h3>
+                    <p class="text-xs text-slate-500">Studi Kasus Rekapitulasi Data Operasional BULOG</p>
+                </div>
+            </div>
+            <div class="space-y-3 text-xs text-slate-600">
+                <p><b>Deskripsi:</b> Sistem dashboard spreadsheet interaktif yang dirancang untuk mempercepat verifikasi rekapitulasi penyaluran beras SPHP dan Bantuan Pangan.</p>
+                <div class="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[11px] overflow-x-auto">
+                    <code>=SUMIFS(Data_Penjualan[Volume], Data_Penjualan[Mitra], "TNI/Polri", Data_Penjualan[Bulan], "Oktober")</code>
+                </div>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Mengotomatiskan rekapitulasi bulanan menggunakan <b>Pivot Table & Dynamic Formulas</b>.</li>
+                    <li>Meminimalkan kesalahan data manual pada pelaporan alokasi bantuan pangan.</li>
+                </ul>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeModal('modal-excel')" class="bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-semibold px-4 py-2 rounded-lg">
+                    Tutup Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: SQL Project -->
+    <div id="modal-sql" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 relative animate-fadeIn">
+            <button onclick="closeModal('modal-sql')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-database text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-base">Analisis Logistik & Piutang (SQL)</h3>
+                    <p class="text-xs text-slate-500">Studi Kasus Kueri Relasional Data</p>
+                </div>
+            </div>
+            <div class="space-y-3 text-xs text-slate-600">
+                <p><b>Deskripsi:</b> Penulisan skrip kueri SQL untuk melakukan pembersihan data (data cleaning), agregasi transaksi, dan audit piutang pembayaran mitra BUMN/TNI/Polri.</p>
+                <div class="bg-slate-900 text-emerald-400 p-3 rounded-lg font-mono text-[11px] overflow-x-auto">
+                    <code>
+                        SELECT mitra_instansi, SUM(total_tagihan) AS total_piutang<br>
+                        FROM transaksi_bulog<br>
+                        WHERE status_pembayaran = 'UNPAID'<br>
+                        GROUP BY mitra_instansi;
+                    </code>
+                </div>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Memvalidasi status pembayaran piutang transaksi secara terpusat.</li>
+                    <li>Menyaring anomali pencatatan pengeluaran persediaan barang.</li>
+                </ul>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeModal('modal-sql')" class="bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-semibold px-4 py-2 rounded-lg">
+                    Tutup Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Modal Control Functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        // Mobile Smooth Scroll Navigation
+        function scrollToSection(sectionId) {
+            const el = document.getElementById(sectionId);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Close modal on outer overlay click
+        window.onclick = function(event) {
+            if (event.target.classList.contains('backdrop-blur-sm')) {
+                event.target.classList.add('hidden');
+            }
+        };
+    </script>
+</body>
+</html>
